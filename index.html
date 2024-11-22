@@ -1,1 +1,219 @@
-COMING SOON...
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="">
+  <script src="https://kit.fontawesome.com/92e8f6cdc3.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap" rel="stylesheet">
+  <title></title>
+
+  <style>
+    body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: "Noto Sans TC", sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+  background-color: #000;
+  
+  overflow:hidden;
+}
+
+.cover {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  z-index:-100;
+  position:relative;
+}
+.cover div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://the-cleaner-0oxx.github.io/media/image/IMG_0146.png");
+  background-size: cover;
+  background-position: center;
+  z-index: -100;
+}
+.cover img {
+  width: 400px;
+  max-width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .cover div {
+    background-image: url("https://the-cleaner-0oxx.github.io/media/image/2d9f7402-b204-4f11-bd5d-430a2ba33b2d.jpg");
+    filter: grayscale(1) brightness(0.7) contrast(1.5);
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.file {
+  text-align: center;
+  width: 80px;
+  text-align: center;
+  border-radius: 2px;
+}
+.file:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.file-name {
+  font-size: 12px;
+  color: white;
+  display: block;
+  font-weight: bold;
+  -webkit-text-stroke: 0.5px black;
+  text-stroke: 0.5px black;
+  text-shadow: 0px 0px 2px black;
+  margin: 10px 0 0;
+}
+.icon-file {
+  width: 45px;
+  height: 30px;
+  margin-left: 17px;
+  margin-top: 13px;
+  background-color: yellow;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 208, 82, 1) 0%,
+    rgba(254, 226, 143, 1) 100%
+  );
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  z-index: 666;
+  position: relative;
+  border-top: 1px #fcbd1a solid;
+  border-bottom: 1px #fcbd1a solid;
+}
+.icon-file:after {
+  content: "";
+  z-index: 667;
+  position: absolute;
+  height: 3px;
+  width: 20px;
+  background-color: white;
+  top: 0;
+  left: 0;
+  border-top-left-radius: 3px;
+  border-bottom-right-radius: 5px;
+}
+.icon-file:before {
+  content: "";
+  z-index: 668;
+  position: absolute;
+  height: 5px;
+  width: 20px;
+  background-color: #fcbd1a;
+  top: -5px;
+  left: 0;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 7px 5px;
+}
+.icon-bin i {
+  font-size: 40px;
+  color: white;
+  margin-top: 8px;
+}
+#bin .file-name {
+  margin-top: 7px;
+}
+.icon-game {
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: -5px;
+  background-size: cover;
+  background-position: center;
+  background-image: url("");
+  background-color: #666;
+  border-radius: 3px;
+  position: relative;
+}
+.icon-game:after {
+  content: "↗";
+  color: #357ec7;
+  font-size: 15px;
+  font-weight: bold;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  bottom: -3px;
+  left: -3px;
+  border-radius: 1px;
+  border: 1.5px lightgray solid;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#bin {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+#m1 {
+  position: fixed;
+  left:5px;
+  bottom: 5px;
+}
+#c1 {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+#f1 {
+  position: absolute;
+  top: 95px;
+  right: 5px;
+}
+  </style>
+</head>
+
+<body>
+  <div class="cover">
+    <div class="cover-img"></div>
+    <img src="https://the-cleaner-0oxx.github.io/media/image/IMG_0162.png">
+    <div class="lang"></div>
+  </div>
+  
+  <div class="desktop">
+    <div class="file" id="bin">
+      <div class="icon-bin">
+        <i class="fa-solid fa-trash"></i>
+      </div>
+      <span class="file-name">Recycle Bin</span>
+    </div>
+    <div class="file" id="m1" title="Type: Human&#013;Size: 18 GB">
+      <div class="icon-game"></div>
+      <span class="file-name">251131395</span>
+    </div>
+    <div class="file" id="c1" title="Date created: 22/6/2024 2:49 pm&#013;Size: 274 MB&#013;Folders: Diary, the-cleaner_0oxx.txt">
+      <div class="icon-file"></div>
+      <span class="file-name">Some TEXT</span>
+    </div>
+    <div class="file" id="f1" title="Date created: 20/6/2024 6:26 pm&#013;Size: 127 MB&#013;Folders: poster00.png, …">
+      <div class="icon-file"></div>
+      <span class="file-name">Poster</span>
+    </div>
+  </div>
+
+  <script>
+  </script>
+</body>
+
+</html>
