@@ -1,0 +1,142 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="">
+  <script src="https://kit.fontawesome.com/92e8f6cdc3.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap" rel="stylesheet">
+  <title></title>
+
+  <style>
+    body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: "Noto Sans TC", sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+  background-color: #000;
+}
+
+.bg-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("");
+  background-size: cover;
+  background-position: center;
+  z-index: -100;
+}
+
+.course {
+  padding: 20px;
+}
+
+.topic {
+  display: block;
+  color: #fff;
+  margin: 0 0 10px;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 0 0 10px #000;
+}
+
+summary::marker,
+summary::-webkit-details-marker {
+  font-size: 12px;
+  color: #ddd;
+}
+summary {
+  color: #fff;
+}
+details {
+  border: 1px #999 solid;
+  border-radius: 2px;
+  padding: 10px;
+  background-color: #222;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 0 20px;
+  overflow: hidden;
+
+  transition: all 0.5s;
+}
+details div div {
+  border-top: 1px #ccc solid;
+  background-color: #eee;
+  padding: 10px;
+  margin: 10px -10px -10px;
+}
+@media screen and (min-width: 768px) {
+  .course {
+    padding: 20px 150px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  details {
+    width: 500px;
+  }
+}
+details div div:hover {
+  background-color: #ddd;
+}
+details div div i {
+  margin-left: 4px;
+  margin-right: 16px;
+  display: inline-block;
+  color: #999;
+}
+details div div {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="bg-img"></div>
+
+  <div class="course">
+    <details open style="margin:0 0 40px;">
+      <summary>Main Story</summary>
+      <div class="content">
+        <div>
+          <i class="fa-regular fa-file-lines"></i>
+          <span>A ballpoint pen? 原子筆？</span>
+        </div>
+        <div>
+          <i class="fa-regular fa-file-lines"></i>
+          <span>Sunshine-Rain 陽光雨</span>
+        </div>
+        <div>
+          <i class="fa-regular fa-file-lines"></i>
+          <span>Emergencies 突發事件</span>
+        </div>
+      </div>
+    </details>
+    
+    <details open style="margin:0 0 40px;">
+      <summary>Other</summary>
+      <div class="content">
+      </div>
+    </details>
+  </div>
+
+  <script>
+  </script>
+</body>
+
+</html>
