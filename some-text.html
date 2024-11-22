@@ -35,10 +35,25 @@
   z-index: -100;
 }
 
+.top-bnt{
+  color:#fff;
+  font-size:14px;
+}
+.top-bnt div{
+  display:inline-block;
+  margin:3px;
+  padding:9px;
+  width:15px;
+  text-align:center;
+  border-radius:2px;
+}
+.top-bnt div:hover{
+  background-color:rgba(255,255,255,0.1);
+}
+
 .course {
   padding: 20px;
 }
-
 .topic {
   display: block;
   color: #fff;
@@ -109,25 +124,48 @@ details div div {
 <body>
   <div class="bg-img"></div>
 
+  <div class="top-bnt">
+    <div onclick="location.href='https://the-cleaner-0oxx.github.io/index.html'">
+      <i class="fa-solid fa-arrow-left"></i>
+    </div>
+    <div style="color:#999;">
+      <i class="fa-solid fa-arrow-right"></i>
+    </div>
+    <div style="color:#999;">
+      <i class="fa-solid fa-arrow-up"></i>
+    </div>
+    <div style="color:#999;">
+      <i class="fa-solid fa-arrow-rotate-left"></i>
+    </div>
+  </div>
+
   <div class="course">
     <details open style="margin:0 0 40px;">
       <summary>Main Story</summary>
       <div class="content">
-        <div>
+        <div onclick="location.href=''">
           <i class="fa-regular fa-file-lines"></i>
           <span>A ballpoint pen? 原子筆？</span>
         </div>
-        <div>
+        <div onclick="location.href=''">
           <i class="fa-regular fa-file-lines"></i>
-          <span>Sunshine-Rain 陽光雨</span>
+          <span>Sunshine-rain 陽光雨</span>
         </div>
-        <div>
+        <div onclick="location.href=''">
           <i class="fa-regular fa-file-lines"></i>
           <span>Emergencies 突發事件</span>
         </div>
+        <div onclick="location.href=''">
+          <i class="fa-regular fa-file-lines"></i>
+          <span>Flower house 花房</span>
+        </div>
+        <div onclick="location.href=''">
+          <i class="fa-regular fa-file-lines"></i>
+          <span>Horrific wardrobe cannibalism 駭人的衣櫃吃人</span>
+        </div>
       </div>
     </details>
-    
+
     <details open style="margin:0 0 40px;">
       <summary>Other</summary>
       <div class="content">
