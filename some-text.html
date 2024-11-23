@@ -29,7 +29,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url("");
+  background-image: url("https://the-cleaner-0oxx.github.io/media/image/3E0AB4CC-9664-4522-A0CB-021E55311627.png");
   background-size: cover;
   background-position: center;
   z-index: -100;
@@ -46,23 +46,15 @@
   width:15px;
   text-align:center;
   border-radius:2px;
+  text-shadow:0 0 6px rgba(0,0,0,0.5);
 }
 .top-bnt div:hover{
-  background-color:rgba(255,255,255,0.1);
+  background-color:rgba(255,255,255,0.3);
 }
 
 .course {
   padding: 20px;
 }
-.topic {
-  display: block;
-  color: #fff;
-  margin: 0 0 10px;
-  font-size: 20px;
-  font-weight: bold;
-  text-shadow: 0 0 10px #000;
-}
-
 summary::marker,
 summary::-webkit-details-marker {
   font-size: 12px;
@@ -70,26 +62,33 @@ summary::-webkit-details-marker {
 }
 summary {
   color: #fff;
+  font-size: 16px;
 }
 details {
-  border: 1px #999 solid;
-  border-radius: 2px;
+  border: 1.5px #282c2f solid;
+  border-radius: 10px;
   padding: 10px;
-  background-color: #222;
+  background-color: #1a2127;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  font-size: 16px;
+  font-size: 14px;
   cursor: pointer;
   margin: 0 0 20px;
   overflow: hidden;
-
+  box-shadow:0 0 20px #000,0 0 5px rgba(0,0,0,0.3);
   transition: all 0.5s;
 }
 details div div {
-  border-top: 1px #ccc solid;
-  background-color: #eee;
-  padding: 10px;
+  background-color: #191919;
+  padding: 8px;
   margin: 10px -10px -10px;
+}
+details div div:nth-child(1) {
+  border-top: 1.5px #282c2f solid;
+}
+details div div span{
+  color:#fff;
+  text-shadow: 0px 0px 2px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000;
 }
 @media screen and (min-width: 768px) {
   .course {
@@ -103,14 +102,15 @@ details div div {
     width: 500px;
   }
 }
-details div div:hover {
-  background-color: #ddd;
+details div div:hover{
+  background-color: #272727;
 }
 details div div i {
+  font-size: 16px;
   margin-left: 4px;
   margin-right: 16px;
   display: inline-block;
-  color: #999;
+  color: #e5e5e5;
 }
 details div div {
   display: flex;
@@ -118,6 +118,41 @@ details div div {
   flex-direction: row;
 }
 
+.term{
+  cursor: default;
+  padding:3px 15px 3px;
+  position:relative;
+  background-color: #1d1d1d;
+}
+.term:hover{
+  background-color: #1d1d1d;
+}
+.term span{
+  color:#aaa;
+  padding-right:10px;
+  border-right:2px #fff solid;
+  padding:-3px;
+  display:block;
+}
+.term div{
+  position:absolute;
+  right:5px;
+  padding:0;
+  margin:0;
+}
+.term div i{
+  font-size:14px;
+  padding:2px;
+  margin:3px;
+  border-radius:3px;
+  width:14px;
+  text-align:center;
+  color:#000;
+  background-color: #aaa;
+}
+.term div:hover{
+  background-color: #1d1d1d;
+}
   </style>
 </head>
 
@@ -163,12 +198,27 @@ details div div {
           <i class="fa-regular fa-file-lines"></i>
           <span>Horrific wardrobe cannibalism 駭人的衣櫃吃人</span>
         </div>
+        
+        <div class="term">
+          <span>5 terms</span>
+          <div>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-regular fa-square"></i>
+          </div>
+        </div>
       </div>
     </details>
 
-    <details open style="margin:0 0 40px;">
+    <details style="margin:0 0 40px;">
       <summary>Other</summary>
       <div class="content">
+        <div class="term">
+          <span>0 terms</span>
+          <div>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-regular fa-square"></i>
+          </div>
+        </div>
       </div>
     </details>
   </div>
