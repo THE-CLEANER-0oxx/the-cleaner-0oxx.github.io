@@ -10,7 +10,7 @@
   <title></title>
 
   <style>
-    body {
+body {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -124,8 +124,14 @@
   color: white;
   margin-top: 8px;
 }
+
 #bin .file-name {
   margin-top: 7px;
+}
+#m2 .icon-game {
+  background-size: cover;
+  background-position: center;
+  background-image: url("https://the-cleaner-0oxx.github.io/media/image/9757-1a0c10f.jpg");
 }
 .icon-game {
   width: 40px;
@@ -142,7 +148,7 @@
 }
 .icon-game span {
   color: #357ec7;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: bold;
   position: absolute;
   width: 10px;
@@ -157,6 +163,10 @@
   justify-content: center;
   flex-direction: column;
 }
+.icon-game span i {
+  transform: rotate(45deg);
+}
+
 #bin {
   position: absolute;
   top: 5px;
@@ -172,11 +182,6 @@
   left: 85px;
   bottom: 5px;
 }
-#m2 .icon-game {
-  background-size: cover;
-  background-position: center;
-  background-image: url("https://the-cleaner-0oxx.github.io/media/image/9757-1a0c10f.jpg");
-}
 #c1 {
   position: absolute;
   top: 5px;
@@ -187,7 +192,6 @@
   top: 95px;
   right: 5px;
 }
-
   </style>
 </head>
 
@@ -206,12 +210,12 @@
   </div>
 
   <div class="file" onclick="location.href='https://www.instagram.com/251131395_10/?utm_source=ig_web_button_share_sheet'" id="m1" title="Type: Human&#013;Size: 18 GB">
-    <div class="icon-game"><span>&#8599;</span></div>
+    <div class="icon-game"><span><i class="fa-solid fa-arrow-up"></i></span></div>
     <span class="file-name">251131395</span>
   </div>
 
   <div class="file" onclick="location.href='https://www.instagram.com/the_cleaner.0oxx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=='" id="m2" title="Type: ???&#013;Size: 99 GB">
-    <div class="icon-game"><span>&#8599;</span></div>
+    <div class="icon-game"><span><i class="fa-solid fa-arrow-up"></i></span></div>
     <span class="file-name">the_clean…</span>
   </div>
 
