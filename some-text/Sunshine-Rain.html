@@ -1,0 +1,473 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=0.8">
+  <meta name="keywords" content="">
+  <script src="https://kit.fontawesome.com/92e8f6cdc3.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap" rel="stylesheet">
+  <title>Sunshine-Rain</title>
+
+  <style>
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: "Noto Sans TC", sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+  background-color: #fafafa;
+}
+
+.top {
+  qqborder: 1px red solid;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index:10;
+}
+.top-top {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px;
+  overflow: hidden;
+}
+.top-top-l {
+}
+.top-top-l i {
+  color: #555;
+  display: block;
+  font-size: 28px;
+  margin: 8px;
+  cursor: pointer;
+}
+
+.top-top-r {
+}
+.t-t-r-top {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.t-t-r-top span {
+  display: block;
+  font-size: 20px;
+  padding: 0px 10px 0px;
+  margin-right: 5px;
+  border: 1px transparent solid;
+  border-radius: 5px;
+  max-width: calc(100vw - 120px);
+  cursor: text;
+
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+.t-t-r-top span:hover {
+  border: 1px #777 solid;
+}
+.t-t-r-top i {
+  color: #555;
+  font-size: 14px;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.t-t-r-top i:hover {
+  background-color: #ddd;
+}
+
+.t-t-r-bnt {
+  margin-left: 4px;
+  white-space: nowrap;
+}
+.t-t-r-bnt span {
+  color: #444;
+  display: inline-block;
+  padding: 3px 8px 2px;
+  border-radius: 3px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.t-t-r-bnt span:hover {
+  background-color: #ddd;
+}
+
+.tools {
+  padding: 5px 10px 5px;
+  margin: -2px 15px 5px;
+  border-radius: 20px;
+  background-color: #eef7ff;
+  white-space: nowrap;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: row;
+}
+.tools div {
+  display: inline-block;
+  margin: 5px 4px 5px;
+  border-left: 1px #999 solid;
+}
+.tools i,
+.tools span {
+  color: #444;
+  font-size: 14px;
+  padding: 7px 10px 7px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.tools i:hover,
+.tools span:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.fx {
+  border-bottom: 1px #bbb solid;
+  padding: 4px 0 2px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.fx span {
+  font-size: 14px;
+  display: inline-block;
+  margin: 0 10px 0;
+  padding: 4px 6px 4px;
+  border-radius: 5px;
+  cursor: text;
+}
+.fx span:hover {
+  background-color: #eee;
+}
+.fx span font {
+  display: inline-block;
+  font-size: 10px;
+  margin-left: 50px;
+  vertical-align: text-top;
+  color: #000;
+}
+.fx font i {
+  margin-left: -5px;
+  padding-left: 10px;
+  font-weight: bold;
+  color: #aaa;
+  border-left: 1px #aaa solid;
+}
+
+.text {
+  overflow: auto;
+  height: 100vh;
+}
+
+.abc {
+  height: 25px;
+  border-bottom: 1.5px #aaa solid;
+  border-bottom: 1.5px #aaa solid;
+  display: flex;
+  align-items: center;
+  overflow: auto;
+  position:relative;
+  z-index:-1;
+}
+.abc div {
+  font-size: 12px;
+  height: 100%;
+  vertical-align: top;
+  border-right: 1.5px #aaa solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+.abc div:nth-child(1) {
+  width: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+.abc div:nth-child(2) {
+  display: none;
+  width: 40px;
+}
+.abc div:nth-child(3) {
+  width: 100%;
+  font-weight: bold;
+  background-color: #d7e8f7;
+}
+.abc div:nth-child(4) {
+  width: 50px;
+}
+
+.row {
+  display: flex;
+  align-items: stretch;
+}
+.row div {
+  border-right: 1.5px #ddd solid;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  padding: 5px;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+.row:nth-child(1) {
+  height: 300px;
+}
+.row:nth-child(1) div:nth-child(1) {
+  font-weight: bold;
+  background-color: #d7e8f7;
+}
+.row:nth-child(1) div:nth-child(3) {
+  border: 1.5px #055bf0 solid;
+}
+.row:nth-child(1) div:nth-child(3) {
+  background-image: url("https://the-cleaner-0oxx.github.io/media/image/DSC_0000012_p580.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.row div:nth-child(1) {
+  border-right: 1.5px #aaa solid;
+  border-bottom: 1.5px #aaa solid;
+  font-size: 12px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.row div:nth-child(2) {
+  display: none;
+  width: 40px;
+  border-bottom: 1.5px #ddd solid;
+}
+.row div:nth-child(3) {
+  width: 100%;
+  border-bottom: 1.5px #ddd solid;
+}
+.row div:nth-child(4) {
+  width: 50px;
+  border-bottom: 1.5px #ddd solid;
+}
+
+.row:nth-child(2) div:nth-child(3) {
+  text-align: justify;
+  line-height: 1.5;
+  font-size: 18px;
+}
+.row:nth-child(3) div:nth-child(3) {
+  text-align: justify;
+  font-size: 18px;
+}
+.row:nth-child(4) div:nth-child(3),
+.row:nth-child(4) div:nth-child(4) {
+  color: #044ecf;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 768px) {
+  .abc div:nth-child(2) {
+    display: flex;
+    width: 70px;
+  }
+  .abc div:nth-child(4) {
+    width: 120px;
+  }
+  .row div:nth-child(2) {
+    display: flex;
+    width: 70px;
+  }
+  .row div:nth-child(4) {
+    width: 120px;
+  }
+  .row:nth-child(2) div:nth-child(3) {
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+  .row:nth-child(3) div:nth-child(3) {
+    text-align: justify;
+    font-size: 16px;
+  }
+}
+
+.bottom {
+  border-top: 1px #ccc solid;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  height: 35px;
+  padding: 0 40px 0;
+  z-index:100;
+
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.bottom i {
+  color: #555;
+  font-size: 14px;
+  margin: 6px;
+  padding: 9px 10px 9px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.bottom i:hover {
+  background-color: #eee;
+}
+.bottom span {
+  height: 100%;
+  padding: 0 10px 0;
+  padding-left: 20px;
+  margin-left: 10px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  text-align: right;
+  color: #044ecf;
+  background-color: #d7e8f7;
+}
+.bottom span font {
+  font-size: 10px;
+  margin-left: 10px;
+  vertical-align: text-top;
+  width: 30px;
+}
+
+.row:nth-child(1) div:nth-child(3){
+  position:relative;
+  overflow:visible;
+}
+.row:nth-child(1) div:nth-child(3) span {
+  width: 8px;
+  height: 8px;
+  background-color:#044ecf;
+  border-radius:50%;
+  border:1.5px #fff solid;
+  display:inline-block;
+  position:absolute;
+  right:-6px;
+  bottom:-6px;
+  z-index:111;
+  cursor: crosshair;
+}
+  </style>
+</head>
+
+<body>
+  <div class="top">
+    <div class="top-top">
+      <div class="top-top-l"><i class="fa-solid fa-table"></i></div>
+      <div class="top-top-r">
+        <div class="t-t-r-top">
+          <span>Sunshine-Rain 陽光雨</span>
+          <i class="fa-regular fa-star"></i>
+        </div>
+        <div class="t-t-r-bnt">
+          <span>File</span>
+          <span>Edit</span>
+          <span>View</span>
+          <span>Insert</span>
+          <span>Format</span>
+          <span>Data</span>
+          <span>Tools</span>
+          <span>Help</span>
+        </div>
+      </div>
+    </div>
+    <div class="tools">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <i class="fa-solid fa-arrow-left"></i>
+      <i class="fa-solid fa-arrow-right"></i>
+      <i class="fa-solid fa-print"></i>
+      <i class="fa-solid fa-paint-roller"></i>
+      <span>100% <font style="font-size:10px;margin-left:10px;vertical-align: text-top;">▼</font></span>
+      <div></div>
+      <span>$</span>
+      <span>%</span>
+      <span>123</span>
+      <div></div>
+      <span>Arial <font style="font-size:10px;margin-left:20px;vertical-align: text-top;">▼</font></span>
+      <i class="fa-solid fa-ellipsis-vertical"></i>
+    </div>
+
+    <div class="fx">
+      <span>B1<font>&#11206;</font></span>
+      <font><i>fx</i></font>
+    </div>
+    <div class="abc">
+      <div></div>
+      <div>A</div>
+      <div>B</div>
+      <div></div>
+    </div>
+
+    <div class="text">
+      <div class="row">
+        <div>1</div>
+        <div></div>
+        <div><span></span></div>
+        <div></div>
+      </div>
+      <div class="row">
+        <div>2</div>
+        <div></div>
+        <div>There is a strange little space embedded in the walls of the corridor, like a strange exhibition hall. The cleaner stops occasionally when he comes across it, for long or short periods of time, he can't tell. The road is always changing, and it's always reassuring to see something familiar, even if it's minimal.<br>
+          <br>
+          There is no wind here, and the rain-shaped decorations don't move for no reason. The cleaner raises his arm and swipes at the decorations, and they make a sound as clear as wind chimes. The overhead sunlamps have a reddish glow, as blazing as the real sun....... Sun? The sky? Have I ever seen the real sun and sky?<br>
+          <br>
+          Forget it. Thinking about unanswered questions will only add to your worries. The cleaner sits on the floor, and when he gets tired of sitting, he lies down. Listening to the low hum of the air vents, accompanied by the jingling of the hanging decorations, the cleaner soon fell asleep.<br>
+          <br>
+          What does he dream about?"
+        </div>
+        <div></div>
+      </div>
+      <div class="row">
+        <div>3</div>
+        <div></div>
+        <div>這裏有一小塊奇怪的空間，嵌入在走廊牆壁之中，像是一個奇怪的展廳。清潔工偶爾遇上展廳，都會停下來，或長或短，他也説不清。路常常在變，遇上熟悉的事物，總會令人生出一絲安心來，即使那是微乎其微的。<br>
+          <br>
+          這裏沒有風，雨水狀的掛飾不會無故地動。清潔工抬起手臂輕掃著掛飾，它們發出如風鈴般清脆的聲音。高掛的太陽燈有一圈紅色的光暈，就如真的太陽一樣熾熱……太陽？天空？我看過真的太陽和天空嗎？<br>
+          <br>
+          算了，思考沒有答案的問題只會為自己徒增煩惱。清潔工席地而坐，坐累了，便躺下。聽著通風口低沉的嗡鳴聲，伴隨著掛飾晃動的叮叮聲，清潔工很快便入睡了。<br>
+          <br>
+          他會夢見甚麼呢？
+        </div>
+        <div></div>
+      </div>
+      <div class="row">
+        <div>4</div>
+        <div></div>
+        <div>go to<br>PREVIOUS<br>chapter</div>
+        <div>go to<br>NEXT<br>chapter</div>
+      </div>
+
+      <div style="height:70vh;"></div>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <i class="fa-solid fa-plus"></i>
+    <i class="fa-solid fa-bars"></i>
+    <span> :) <font>▼</font></span>
+  </div>
+
+  <script>
+  </script>
+</body>
+
+</html>
